@@ -36,7 +36,6 @@ import {
   roadmap,
   riskTable,
   solutionPillars,
-  sources,
   strategicProblem,
   surveyHighlights,
   valueSeries
@@ -686,32 +685,6 @@ export function StrategicSite() {
             </Reveal>
           </section>
 
-          <footer className="rounded-[2rem] border border-white/10 bg-[rgba(255,255,255,0.04)] px-6 py-6 sm:px-8">
-            <div className="grid gap-6 lg:grid-cols-[0.85fr_1.15fr]">
-              <div>
-                <p className="text-xs uppercase tracking-[0.28em] text-[var(--muted-foreground)]">
-                  Closing note
-                </p>
-                <p className="mt-3 max-w-2xl text-sm leading-7 text-[var(--muted-foreground)]">
-                  The site is intentionally built as one argument: first establish why the company is
-                  special, then show where the specialness gets stressed, then prove it, then answer
-                  it decisively.
-                </p>
-              </div>
-              <div>
-                <p className="text-xs uppercase tracking-[0.28em] text-[var(--muted-foreground)]">
-                  Sources used on site
-                </p>
-                <div className="mt-3 grid gap-2 sm:grid-cols-2">
-                  {sources.map((source) => (
-                    <p key={source} className="text-sm text-[var(--foreground)]">
-                      {source}
-                    </p>
-                  ))}
-                </div>
-              </div>
-            </div>
-          </footer>
         </div>
       </main>
     </div>
