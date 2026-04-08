@@ -1,0 +1,71 @@
+@import "tailwindcss";
+
+:root {
+  --nav-offset: 8.5rem;
+  --font-sans:
+    "Optima", "Avenir Next", Avenir, "Helvetica Neue", "Segoe UI", -apple-system, BlinkMacSystemFont,
+    sans-serif;
+  --font-display:
+    "Cooper Black", "Rockwell Extra Bold", "Bookman Old Style", "Baskerville", "Iowan Old Style", "Palatino Linotype", "Book Antiqua", Palatino, "Times New Roman",
+    serif;
+  --background: #120905;
+  --foreground: #fff5e8;
+  --muted-foreground: #dbc6b2;
+  --surface: rgba(255, 255, 255, 0.05);
+  --surface-strong: rgba(255, 255, 255, 0.1);
+  --accent: #d62828;
+  --accent-strong: #9a1c1c;
+  --accent-soft: #f3b41b;
+  --accent-foreground: #fff7f2;
+  --ring: rgba(243, 180, 27, 0.7);
+  --ink: #1d120d;
+  --ink-muted: #6b5548;
+}
+
+@theme inline {
+  --font-sans: var(--font-sans);
+  --font-display: var(--font-display);
+}
+
+* {
+  border-color: transparent;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: var(--nav-offset);
+}
+
+body {
+  min-height: 100vh;
+  background:
+    radial-gradient(circle at top, rgba(214, 40, 40, 0.18), transparent 24%),
+    radial-gradient(circle at 85% 18%, rgba(243, 180, 27, 0.12), transparent 20%),
+    linear-gradient(180deg, #120905 0%, #1a0d07 38%, #120905 100%);
+  color: var(--foreground);
+  font-family: var(--font-sans), sans-serif;
+  text-rendering: optimizeLegibility;
+}
+
+.font-display {
+  font-family: var(--font-display), serif;
+  letter-spacing: -0.035em;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.018) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.018) 1px, transparent 1px);
+  background-size: 72px 72px;
+  mask-image: linear-gradient(180deg, rgba(0, 0, 0, 0.35), transparent 75%);
+  opacity: 0.35;
+}
+
+::selection {
+  background: rgba(201, 106, 56, 0.3);
+  color: var(--foreground);
+}
