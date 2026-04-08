@@ -18,7 +18,6 @@ import {
 } from "@/components/chart-panel";
 import { Reveal } from "@/components/reveal";
 import { SectionHeading } from "@/components/section-heading";
-import { SectionTracker } from "@/components/section-tracker";
 import { SiteNavigation } from "@/components/site-navigation";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
@@ -142,10 +141,8 @@ export function StrategicSite() {
         <div className="absolute left-[20%] top-[118rem] h-80 w-80 rounded-full bg-[rgba(64,44,34,0.16)] blur-3xl" />
       </div>
 
-      <main className="relative mx-auto flex w-full max-w-[1560px] gap-10 px-4 pb-16 pt-24 sm:px-6 lg:px-8 xl:px-10">
-        <SectionTracker />
-
-        <div className="min-w-0 flex-1 space-y-10">
+      <main className="relative mx-auto w-full max-w-[1440px] px-4 pb-16 pt-24 sm:px-6 lg:px-8 xl:px-10">
+        <div className="min-w-0 space-y-10">
           <section
             id="the-house-value-built"
             className="scroll-mt-32 overflow-hidden rounded-[2.75rem] border border-white/10 bg-[radial-gradient(circle_at_top_right,rgba(201,106,56,0.18),transparent_28%),linear-gradient(180deg,rgba(255,255,255,0.06),rgba(255,255,255,0.02))] px-5 py-7 shadow-[0_24px_90px_rgba(0,0,0,0.28)] sm:px-8 lg:px-10 lg:py-10"
